@@ -1,0 +1,59 @@
+/*
+#BBFAE7
+#BBE1FA
+#3282B8
+#0F4C75
+#1B262C */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Inter", sans-serif;
+	color: #bbf5fa;
+	background-color: #1b262c;
+	box-sizing: border-box;
+}
+
+#main-header {
+	background-color: #0f4c75;
+	padding: 1rem 2%;
+	text-align: center;
+}
+
+#main-header h1 {
+	font-size: 2.2rem;
+	margin: 0.6rem auto;
+}
+
+#main-header p {
+	text-wrap: balance; /* 🚨 Prevent might not work on every browser}*/
+}
+
+.btn {
+	font: inherit;
+	background-color: #0f4c75;
+	color: #bbf5fa;
+	border: 1px solid #0f4c75;
+	padding: 0.4rem 1.2rem;
+	border-radius: 0.6rem;
+	cursor: pointer;
+}
+
+.btn-alt {
+	background-color: #bbf5fa;
+	border: transparent;
+	color: #0f4c75;
+	border: 1px solid #bbf5fa;
+}
+
+.btn:hover {
+	background-color: #0b3855;
+	border: 1px solid #0b3855;
+	transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-alt:hover {
+	background-color: #566e70;
+	border-color: transparent;
+	color: #bbf5fa;
+}

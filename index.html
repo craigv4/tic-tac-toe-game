@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tic Tac Toe</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="./styles/main.css">
+	</head>
+	<body>
+		<header id="main-header">
+			<h1>Play Tic Tac Toe</h1>
+			<p>This game was built to Learn and Practice HTML, CSS and JavaScript</p>
+		</header>
+		<aside>
+			<h2>Choose Your Name</h2>
+			<form>
+				<div>
+					<label for="player-name">Player Name</label>
+					<input type="text" name="player-name" id="player-name" />
+				</div>
+				<div>
+					<button type="button" class="btn btn-alt">Cancel</button>
+					<button type="submit" class="btn">Confirm</button>
+				</div>
+			</form>
+		</aside>
+		<main>
+			<section id="game-config">
+				<ol>
+					<li>
+						<article>
+							<h2>Player 1</h2>
+							<h3>PLAYER NAME</h3>
+							<p>X</p>
+							<button class="btn btn-alt">Edit Name</button>
+						</article>
+					</li>
+					<li>
+						<article>
+							<h2>Player 2</h2>
+							<h3>PLAYER NAME</h3>
+							<p>O</p>
+							<button class="btn btn-alt">Edit Name</button>
+						</article>
+					</li>
+				</ol>
+				<button class="btn">Start New game</button>
+			</section>
+			<section id="active-game">
+				<article>
+					<h3>Congratulations You Won <span id="winner-player">Player Name</span></h3>
+					<p>Click "Start New Game" above to start a new game</p>
+				</article>
+				<p>Its Your Turn <span id="active-player-name">Player Name</span> !</p>
+				<ol>
+					<li></li>
+					<li></li>
+					<li></li>
+
+					<li></li>
+					<li></li>
+					<li></li>
+
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</section>
+		</main>
+	</body>
+</html>
