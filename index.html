@@ -7,18 +7,22 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-	<link rel="stylesheet" href="./styles/main.css">
+		<link rel="stylesheet" href="./styles/main.css" />
+		<link rel="stylesheet" href="./styles/overlays.css" />
+		<link rel="stylesheet" href="./styles/config.css" />
+		<link rel="stylesheet" href="./styles/game.css" />
 	</head>
 	<body>
+		<div id="backdrop"></div>
 		<header id="main-header">
 			<h1>Play Tic Tac Toe</h1>
 			<p>This game was built to Learn and Practice HTML, CSS and JavaScript</p>
 		</header>
-		<aside>
+		<aside class="overlay" id="config-overlay">
 			<h2>Choose Your Name</h2>
-			<form>
+			<form class="form-control">
 				<div>
-					<label for="player-name">Player Name</label>
+					<label for="player-name">Your Name</label>
 					<input type="text" name="player-name" id="player-name" />
 				</div>
 				<div>
@@ -34,41 +38,47 @@
 						<article>
 							<h2>Player 1</h2>
 							<h3>PLAYER NAME</h3>
-							<p>X</p>
-							<button class="btn btn-alt">Edit Name</button>
+							<p class="player-sign">X</p>
+							<button class="btn btn-alt">Edit</button>
 						</article>
 					</li>
 					<li>
 						<article>
 							<h2>Player 2</h2>
 							<h3>PLAYER NAME</h3>
-							<p>O</p>
-							<button class="btn btn-alt">Edit Name</button>
+							<p class="player-sign">O</p>
+							<button class="btn btn-alt">Edit</button>
 						</article>
 					</li>
 				</ol>
 				<button class="btn">Start New game</button>
 			</section>
 			<section id="active-game">
-				<article>
-					<h3>Congratulations You Won <span id="winner-player">Player Name</span></h3>
+				<article id="game-info">
+					<h3>
+						<span id="congratulations">Congratulations !! <br /></span><span id="winner-player">Player Name</span>
+					</h3>
 					<p>Click "Start New Game" above to start a new game</p>
 				</article>
-				<p>Its Your Turn <span id="active-player-name">Player Name</span> !</p>
-				<ol>
-					<li></li>
-					<li></li>
-					<li></li>
-
-					<li></li>
+				<p>Its Your Turn <span id="active-player-name"> Player Name !</span></p>
+				<ol id="game-board">
+					<li class="disabled">x</li>
 					<li></li>
 					<li></li>
 
 					<li></li>
+					<li class="disabled">o</li>
 					<li></li>
+
+					<li></li>
+					<li class="disabled">o</li>
 					<li></li>
 				</ol>
 			</section>
 		</main>
+		<footer>
+			<h1>footer</h1>
+			<p>footer content</p>
+		</footer>
 	</body>
 </html>
