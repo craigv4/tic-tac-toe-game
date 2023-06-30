@@ -53,7 +53,8 @@ body {
 }
 
 .btn-alt:hover {
-	background-color: #566e70;
+	background-color: #0f4c75;
 	border-color: transparent;
 	color: #bbf5fa;
+	border: 1px solid #bbf5fa;
 }

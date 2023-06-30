@@ -7,7 +7,7 @@
 	background-color: rgb(15, 76, 117);
 	padding: 1rem;
 	border-radius: 0.4rem;
-	box-shadow: 0.4rem 0.4rem 2rem rgba(187, 225, 250, 0.2);
+	/* box-shadow: 0 1rem 4rem rgba(187, 225, 250, 0.644); */
 	text-align: center;
 	display: none;
 }
@@ -18,8 +18,8 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	background-color: rgba(0, 0, 0, 0.4);
-  display: none;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
 }
 
 @media (min-width: 48rem) {
