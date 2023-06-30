@@ -10,13 +10,25 @@
 	font-size: 1.2rem;
 }
 .form-control input {
-	margin: 0 0 1rem 0;
+	/* margin: 0 0 1rem 0; */
 	font: inherit;
 	font-size: 1.2rem;
 	border: 2px solid #0f4c75;
 	border-radius: 0.4rem;
-	padding: 0.2rem;
+	padding: 0.6rem;
 }
+
+.error input {
+	border-color: #fc4f00;
+	background-color: #ffc4a9;
+}
+
+#error-text {
+	color: #fc4f00;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
 #config-overlay .btn {
 	background-color: #bbf5fa;
 	color: #0f4c75;
@@ -59,9 +71,9 @@
 	background-color: #0f4c75;
 	border-radius: 0.4rem;
 }
-#game-config ol li h2{
-  	font-size: 0.8rem;
-    font-weight: normal;
+#game-config ol li h2 {
+	font-size: 0.8rem;
+	font-weight: normal;
 }
 
 #game-config ol li h3 {
@@ -70,8 +82,8 @@
 }
 .player-sign {
 	font-size: 2rem;
-  font-weight: bold;
-  margin: 0.5rem;
+	font-weight: bold;
+	margin: 0.5rem;
 }
 @media (min-width: 768px) {
 	#game-config ol li {
