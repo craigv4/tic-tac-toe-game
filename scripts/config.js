@@ -1,4 +1,5 @@
-const openEditOverlay = () => {
+const openEditOverlay = (event) => {
+	editedPlayer = +event.target.dataset.playerid; // adding `+` in front of will convert the string to a number
 	backdrop.style.display = "block";
 	configOverlay.style.display = "block";
 };
@@ -21,4 +22,19 @@ const updatePlayerName = (event) => {
 		formElement.firstElementChild.classList.add("error");
 		return;
 	}
+
+	const selectedPlayerElement = document.getElementById("player-data-" + editedPlayer);
+	selectedPlayerElement.children[1].textContent = playerName;
+
+	players[editedPlayer - 1].name = playerName;
+
+	closeEditOverlay();
+	formElement.firstElementChild.lastElementChild.value = "";
 };
+
+/*
+Day 46 of #100DaysOfCode
+✔ Half the project is completed
+✔ Finished up Player Configuration overlay
+✔ See the updated code here
+*/
