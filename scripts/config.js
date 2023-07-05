@@ -31,10 +31,3 @@ const updatePlayerName = (event) => {
 	closeEditOverlay();
 	formElement.firstElementChild.lastElementChild.value = "";
 };
-
-/*
-Day 46 of #100DaysOfCode
-✔ Half the project is completed
-✔ Finished up Player Configuration overlay
-✔ See the updated code here
-*/
