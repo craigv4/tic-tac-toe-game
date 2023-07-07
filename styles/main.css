@@ -58,3 +58,21 @@ body {
 	color: #bbf5fa;
 	border: 1px solid #bbf5fa;
 }
+
+footer {
+	margin: 2.8rem 0 0 0;
+}
+
+footer * {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0.2rem;
+	text-decoration: none;
+	color: #bbf5fa;
+}
+
+footer h3 a {
+	font-size: 2rem;
+}
