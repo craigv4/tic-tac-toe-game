@@ -6,6 +6,7 @@ let gameData = [
 
 let editedPlayer = 0;
 let activePlayer = 0;
+let currentRound = 1
 
 const players = [
 	{
@@ -29,6 +30,10 @@ const startGameButton = document.getElementById("start-game");
 const formElement = document.querySelector("form");
 const errorText = document.getElementById("error-text");
 const activePlayerName = document.getElementById("active-player-name");
+
+const turnPlayer = document.querySelector("#active-game > p")
+const gameInfo = document.getElementById("game-info");
+const winningPlayer = document.getElementById("winner-player")
 
 player1EditButton.addEventListener("click", openEditOverlay);
 player2EditButton.addEventListener("click", openEditOverlay);
