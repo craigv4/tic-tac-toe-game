@@ -1,5 +1,3 @@
-
-
 const startNewGame = () => {
 	if (players[0].name === "" || players[1].name === "") {
 		alert("Please set Player Names before starting a New Game !!");
@@ -22,7 +20,7 @@ const switchPlayer = () => {
 };
 
 const selectGameField = (event) => {
-	if (event.target.tagName !== "LI") {
+	if (event.target.tagName !== "LI" || gameIsOver) {
 		return;
 	}
 	let selectedField = event.target;
@@ -46,33 +44,46 @@ const selectGameField = (event) => {
 	if (winnerID !== 0) {
 		finishGame(winnerID);
 	}
-	console.log(winnerID);
 
 	currentRound++;
-
 	switchPlayer();
 };
 
 const checkGameOver = () => {
 	// check if row is winner
 	for (let i = 0; i < 3; i++) {
-		if (gameData[i][0] >= 0 && gameData[i][0] === gameData[i][1] && gameData[i][1] === gameData[i][2]) {
+		if (
+		gameData[ i ][ 0 ] >= 0 &&
+		gameData[ i ][ 0 ] === gameData[ i ][ 1 ] &&
+		gameData[ i ][ 1 ] === gameData[ i ][ 2 ])
+		{
 			// console.log(gameData[i][0]);
 			return gameData[i][0];
 		}
 	}
 	// check if column is winner
 	for (let i = 0; i < 3; i++) {
-		if (gameData[0][i] >= 0 && gameData[0][i] === gameData[1][i] && gameData[1][i] === gameData[2][i]) {
+		if (gameData[ 0 ][ i ] >= 0 &&
+			gameData[ 0 ][ i ] === gameData[ 1 ][ i ] &&
+			gameData[ 0 ][ i ] === gameData[ 2 ][ i ]) {
 			// console.log(gameData[0][i]);
 			return gameData[0][i];
 		}
 	}
 
 	// if cross 3 lines are same symbol
-	if (gameData[0][0] >= 0 && gameData[0][0] === gameData[1][1] && gameData[1][1] === gameData[2][2]) {
-		return gameData[0][0];
-	} else if (gameData[2][0] >= 0 && gameData[2][0] === gameData[1][1] && gameData[1][1] === gameData[0][2]) {
+	if (
+		gameData[ 0 ][ 0 ] >= 0 &&
+		gameData[ 0 ][ 0 ] === gameData[ 1 ][ 1 ] &&
+		gameData[ 1 ][ 1 ] === gameData[ 2 ][ 2 ]) {
+		return gameData[ 0 ][ 0 ];
+
+	}
+
+	if (
+		gameData[ 2 ][ 0 ] >= 0 &&
+		gameData[ 2 ][ 0 ] === gameData[ 1 ][ 1 ] &&
+		gameData[ 1 ][ 1 ] === gameData[ 0 ][ 2 ]) {
 		return gameData[2][0];
 	}
 
@@ -93,6 +104,7 @@ const checkGameOver = () => {
 }; */
 
 finishGame = (winnerID) => {
+	gameIsOver = true;
 	gameInfo.style.display = "block";
 
 	if (winnerID > 0) {
@@ -108,6 +120,7 @@ finishGame = (winnerID) => {
 const resetGame = () => {
 	activePlayer = 0;
 	currentRound = 1;
+gameIsOver = false;
 	// gameInfo.firstElementChild.innerHTML = "<h3>Winner is<br /><span id=winner-player>Player Name</span></h3>";
 	gameInfo.style.display = "none";
 
